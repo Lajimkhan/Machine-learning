@@ -1,147 +1,216 @@
-# 🚧 Landslide Prediction Using Gradient Boosting (Machine Learning Project)
+Landslide Prediction Using Gradient Boosting & Data Resampling
+🛰️ Landslide Susceptibility Prediction (Machine Learning Project)
 
-This repository contains a complete machine learning workflow for **landslide susceptibility prediction** using environmental and geological features. The project includes **data preprocessing**, **class balancing using RandomUnderSampler**, **model training**, and **detailed evaluation** with visualizations.
+This project focuses on predicting landslide occurrence using a supervised machine learning pipeline.
+It includes:
 
----
+Data preprocessing
 
-## 📌 **Project Overview**
+Handling class imbalance with RandomUnderSampler
 
-Landslides are major natural hazards influenced by various environmental and climatic factors.
-This machine learning model predicts landslide occurrence (0 or 1) using features such as:
+Gradient Boosting classification
 
-* Elevation
-* Slope
-* Curvature
-* Lithology
-* NDVI & NDWI
-* Rainfall
-* Temperature
-* Humidity
-* Earthquake data
-* Moisture & Pressure
-* And many other physical attributes
+Evaluation using multiple metrics
 
-The dataset has **190,890 samples** and **17 feature columns**.
+Visualization of model performance (confusion matrix, ROC, PR curve, F1 curve, learning curve)
 
-Machine learning model used:
-🔹 **Gradient Boosting Classifier (GBC)**
+The dataset contains environmental, geographical, and climatic features such as Elevation, Slope, NDVI, Lithology, Rainfall, Humidity, Pressure, etc.
 
----
+📂 Project Structure
+📁 Landslide-Prediction-ML
+│
+├── dataset/
+│   └── new1SupervisedDataSet.csv
+│
+├── src/
+│   └── landslide_prediction.ipynb
+│
+├── README.md
+└── requirements.txt
 
-## 📁 **Dataset**
+🔧 Technologies & Libraries Used
 
-The dataset is stored in Google Drive and loaded into Google Colab:
+Python 3.x
 
-```
-/content/drive/MyDrive/ml Final/new1SupervisedDataSet.csv
-```
+Pandas, NumPy
 
-### **Target Variable**
+Scikit-Learn
 
-* **Landslide (0 or 1)**
+Imbalanced-learn (RandomUnderSampler)
 
-### **Features**
+Matplotlib, Seaborn
 
-`Aspect, Curvature, Earthquake, Elevation, Flow, Lithology, NDVI, NDWI, Plan, Precipitation, Profile, Slope, temperature, humidity, rain, moisture, pressure`
+Google Colab (optional)
 
----
+📥 How to Run the Project
+1. Clone the Repository
+git clone https://github.com/yourusername/Landslide-Prediction-ML.git
+cd Landslide-Prediction-ML
 
-## ⚙️ **Tech Stack / Libraries Used**
+2. Install Required Libraries
 
-* Python
-* Pandas, NumPy
-* Matplotlib, Seaborn
-* scikit-learn
-* imbalanced-learn
-* Google Colab
+Create a requirements.txt file or use:
 
----
+pip install -r requirements.txt
 
-## 🧹 **Data Processing Steps**
 
-1. **Load dataset**
-2. **Check missing values**
-3. **Separate features & target**
-4. **Handle class imbalance using RandomUnderSampler**
-5. **Split into training and testing sets**
-6. **Train Gradient Boosting Classifier**
-7. **Evaluate model performance**
+Or manually:
 
----
+pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
 
-## 📊 **Model Evaluation Metrics**
+3. Open the Notebook
 
-| Metric                               | Score     |
-| ------------------------------------ | --------- |
-| **Accuracy (Undersampled Test Set)** | `0.9904`  |
-| **R2 Score**                         | `0.9604`  |
-| **MSE**                              | `0.00959` |
-| **Final Test Accuracy**              | `0.9971`  |
-| **Precision**                        | `0.9849`  |
-| **Recall**                           | `0.9582`  |
-| **F1-score**                         | `0.9714`  |
+Use Jupyter/Colab:
 
----
+jupyter notebook
 
-## 📈 **Visualizations Included**
 
-✔️ Original Class Distribution
-✔️ Undersampled Class Distribution
-✔️ Correlation Heatmap
-✔️ Confusion Matrix
-✔️ Precision–Recall Curve
-✔️ F1-score Curve
-✔️ ROC Curve
-✔️ Accuracy vs Threshold Curve
-✔️ Learning Curve (Train vs Cross-validation)
+Run:
 
----
+src/landslide_prediction.ipynb
 
-## 📦 **How to Run the Code**
+🧠 Model Used: Gradient Boosting Classifier
 
-### **1. Clone this repository**
+Gradient Boosting is used due to its strong performance on tabular data and ability to model complex interactions.
 
-```bash
-git clone https://github.com/yourusername/your-repository-name.git
-```
+📊 Evaluation Metrics
 
-### **2. Open Google Colab**
+The project evaluates the model using:
 
-Upload the notebook or copy the script.
+Accuracy
 
-### **3. Mount Google Drive**
+Precision
 
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
+Recall
 
-### **4. Install Dependencies**
+F1 Score
 
-```bash
-pip install pandas numpy seaborn scikit-learn imbalanced-learn matplotlib
-```
+Confusion Matrix
 
-### **5. Run the script**
+ROC Curve & AUC
 
-The script handles:
+Precision–Recall Curve
 
-* Data loading
-* Preprocessing
-* Undersampling
-* Model training
-* Evaluation
-* Plotting
+Learning Curve
 
----
+Error Metrics (R² Score, MSE)
 
-## 🚀 **Future Improvements**
+Model Performance
+Metric	Score
+Accuracy	0.99+
+Precision	0.98
+Recall	0.95
+F1 Score	0.97
+R² Score	0.96
+MSE	0.0095
+🖼️ Visualizations Included
 
-* Use SMOTE + Tomek Links for better balancing
-* Try XGBoost / LightGBM for higher accuracy
-* Hyperparameter tuning with GridSearchCV / Optuna
-* Deployment using Flask or FastAPI
-* Convert model to ONNX
-* Add SHAP explainability
+Class distribution before/after resampling
 
----
+Correlation heatmap
+
+Confusion matrix
+
+ROC curve
+
+Precision–Recall curve
+
+F1 score vs. threshold
+
+Accuracy vs. threshold
+
+Learning curve
+
+🚀 Future Improvements
+
+Here are recommended improvements to enhance your project:
+
+🔹 1. Try More Models
+
+Experiment with:
+
+Random Forest
+
+XGBoost
+
+LightGBM
+
+CatBoost
+
+SVM
+
+Logistic Regression (baseline)
+
+🔹 2. Hyperparameter Tuning
+
+Use:
+
+GridSearchCV
+RandomizedSearchCV
+Optuna (best option)
+
+🔹 3. Feature Engineering
+
+Create composite features
+
+Conduct feature selection (SHAP, permutation importance)
+
+Handle outliers
+
+🔹 4. Use Advanced Sampling Techniques
+
+Instead of RandomUnderSampler:
+
+SMOTE
+
+ADASYN
+
+SMOTEENN (hybrid)
+
+🔹 5. Deploy the Model
+
+Deploy using:
+
+Flask / FastAPI
+
+Streamlit interactive dashboard
+
+Docker container
+
+Google Cloud / AWS deployment
+
+🔹 6. Integrate GIS
+
+Combine ML with:
+
+QGIS
+
+ArcGIS
+
+DEM generation
+
+Geospatial heatmaps
+
+🔹 7. Real-Time Monitoring
+
+Enable periodic retraining using:
+
+Weather updates
+
+Rainfall predictions
+
+Satellite imagery (NDVI/NDWI updates)
+
+🔹 8. Add Explainability (XAI)
+
+Use:
+
+SHAP values
+
+LIME
+To understand how each feature affects landslide prediction.
+
+🏁 Conclusion
+
+This project demonstrates a full ML pipeline for landslide susceptibility prediction using a Gradient Boosting Classifier.
+The current model achieves excellent accuracy and performs well across multiple metrics.
