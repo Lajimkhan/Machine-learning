@@ -1,4 +1,3 @@
-Landslide Prediction Using Gradient Boosting & Data Resampling
 🛰️ Landslide Susceptibility Prediction (Machine Learning Project)
 
 This project focuses on predicting landslide occurrence using a supervised machine learning pipeline.
