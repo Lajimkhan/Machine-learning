@@ -1,8 +1,3 @@
-Here is a **professional README.md** file for your GitHub repository based on the full workflow and code you shared.
-You can directly copy–paste into your README.md.
-
----
-
 # 🚧 Landslide Prediction Using Gradient Boosting (Machine Learning Project)
 
 This repository contains a complete machine learning workflow for **landslide susceptibility prediction** using environmental and geological features. The project includes **data preprocessing**, **class balancing using RandomUnderSampler**, **model training**, and **detailed evaluation** with visualizations.
@@ -150,25 +145,3 @@ The script handles:
 * Add SHAP explainability
 
 ---
-
-## 🙌 **Contributions**
-
-Pull requests are welcome!
-If you want to improve the model or visualizations, feel free to submit a PR.
-
----
-
-## 📄 **License**
-
-This project is open-source under the MIT License.
-
----
-
-If you'd like, I can also create:
-
-✅ A polished **Jupyter Notebook (.ipynb)**
-✅ A **GitHub banner**
-✅ A **requirements.txt** file
-✅ A **model pipeline diagram**
-
-Just tell me!
