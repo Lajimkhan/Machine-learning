@@ -43,7 +43,7 @@ Google Colab (optional)
 
 📥 How to Run the Project
 1. Clone the Repository
-git clone https://github.com/yourusername/Landslide-Prediction-ML.git
+git clone https://github.com/Lajimkhan/Landslide-Prediction-ML.git
 cd Landslide-Prediction-ML
 
 2. Install Required Libraries
